@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: #00f260; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #0575e6,
+    #00f260
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #0575e6,
+    #00f260
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.react-chatbot-kit-chat-container {
+  width: 80vw !important;
+  
+
+}
+
+.react-chatbot-kit-chat-inner-container{
+  border-radius: 20px !important;
+}
+
+.react-chatbot-kit-chat-bot-message {
+  margin-left: 0 !important;
+  width: 45% !important;
+}
+
+.react-chatbot-kit-chat-header {
+  background-color:#00c24e !important;
+  border-radius: 20px 20px 0 0 !important;
+  justify-content: center;
+  font-size: 1.1rem !important;
+  color: white !important;
+}
+
+.react-chatbot-kit-chat-input{
+  border-radius: 0 0 0 20px  !important;
+  z-index: 22;
+  /* background-color: #036bd3 !important; */
+  /* border: solid rgba(0, 0, 0, 0.267) 1px !important; */
+  /* color:white !important; */
+}
+
+
+.react-chatbot-kit-chat-btn-send{
+  border-radius: 0 0 20px 0 !important;
+
+}
+
+.options-btn {
+  background-color: #376b7e;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  line-height: 1rem;
+}
+
+.options-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 3.5rem;
+}
+
+.option-city{
+  margin-left: 3.5rem;
+}
+.city{
+  padding:.5rem;
+  cursor: pointer;
+  background-color: #376b7e;
+  border-radius: 5px;
+  border: none;
+}
+
+/*  */
+
+.btn {
+  --color: #0077ff;
+  font-family: inherit;
+  display: inline-block;
+  text-align: center;
+  width: 7em;
+  padding: 7px 5px;
+  /* height: 2.6em; */
+  /* line-height: 2.5em; */
+  overflow: hidden;
+  cursor: pointer;
+  /* margin: 20px; */
+  /* font-size: 17px; */
+  z-index: 1;
+  color: #376b7e;
+  background-color: white;
+  border: 2px solid #376b7e;
+  border-radius: 30px;
+  position: relative;
+}
+
+.btn::before {
+  position: absolute;
+  content: "";
+  background: var(--color);
+  width: 175px;
+  height: 250px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn:before {
+  top: 100%;
+  left: 100%;
+  transition: 0.2s all;
+}
+
+.btn:hover::before {
+  top: -30px;
+  left: -30px;
+}
