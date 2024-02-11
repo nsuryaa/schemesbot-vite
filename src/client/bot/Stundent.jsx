@@ -1,18 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 export default function Student(props) {
   let botMessage = "Let me gather the schemes for you.";
   const setStudent = (event) => {
     let value = event.target.textContent;
-    props.setState((state) => ({ ...state, category: value }));
-    console.log(props.state.category);
+    let newState = { ...props.state, category: value };
+    props.setState(newState);
+    props.actions.handleDb(newState);
     document.getElementById("student").style.display = "none";
     props.actions.handleEvent(value, botMessage);
   };
-  // props.actions.handleDb(props.state);
-  useEffect(() => {
-    props.actions.handleDb(props.state);
-  }, ["props.state"]);
+
+  // props.actions.handleDb(props.state)
+  // useEffect(() => {
+  //   props.actions.handleDb(props.state);
+  //   console.log(props.state.category);
+  // }, [props.state.category]);
   return (
     <div id="student" className="options-container">
       <button
