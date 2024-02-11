@@ -45,6 +45,8 @@ app.post("/suggest", async (req, res) => {
           "scheme_details.beneficiaries": `${req.body.community}`,
         },
         { "scheme_details.beneficiaries": `${req.body.category}` },
+        
+        {"scheme_details.beneficiaries": `${req.body.gender === "Female"?"Pregnant Women":""}`}
       ],
     };
 
