@@ -15,6 +15,39 @@ const config = {
       }
     ),
   ],
+  // customComponents: {
+  //   // Replaces the default header
+  //   header: () => (
+  //     <div style={{ padding: "5px", borderRadius: "3px" }}>
+  //       <svg
+  //         xmlns="http://www.w3.org/2000/svg"
+  //         width="200"
+  //         height="60"
+  //         viewBox="0 0 200 60"
+  //         className="h-auto w-auto"
+  //       >
+  //         <text
+  //           x="0"
+  //           y="50"
+  //           fontFamily="Arial, Helvetica, sans-serif"
+  //           fontSize="30"
+  //           fontWeight="bold"
+  //           fill="black"
+  //         >
+  //           SchemesBot
+  //         </text>
+  //       </svg>
+  //     </div>
+  //   ),
+  // Replaces the default bot avatar
+  //  botAvatar: (props) => <MyAvatar {...props} />,
+  //  // Replaces the default bot chat message container
+  //  botChatMessage: (props) => <MyCustomChatMessage {...props} />,
+  //  // Replaces the default user icon
+  //  userAvatar: (props) => <MyCustomAvatar {...props} />,
+  //  // Replaces the default user chat message
+  //  userChatMessage: (props) => <MyCustomUserChatMessage {...props} />
+  // },
 
   state: {
     gender: null,
@@ -58,7 +91,7 @@ const config = {
   botName: botName,
   customStyles: {
     botMessageBox: {
-      backgroundColor: "#376B7E",
+      backgroundColor: "#6E00FF",
     },
     chatButton: {
       backgroundColor: "#5ccc9d",

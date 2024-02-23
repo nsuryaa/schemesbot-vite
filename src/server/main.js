@@ -39,13 +39,13 @@ app.post("/suggest", async (req, res) => {
     //   "scheme_details.eligibility_criteria.community": `${req.body.community}`,
     // };
     const query = {
-      // "scheme_details.beneficiaries": `${req.body.category}`,
-      $or: [
-        {
-          "scheme_details.beneficiaries": `${req.body.community}`,
-        },
-        { "scheme_details.beneficiaries": `${req.body.category}` },
-      ],
+      "scheme_details.beneficiaries": `${req.body.community}`,
+      // $or: [
+      //   {
+      //     "scheme_details.beneficiaries": `${req.body.community}`,
+      //   },
+      //   { "scheme_details.beneficiaries": `${req.body.category}` },
+      // ],
     };
 
     const options = {
