@@ -2,13 +2,14 @@ import React, { useEffect, useRef } from "react";
 
 export default function Student(props) {
   let botMessage = "Let me gather the schemes for you.";
+  let widget = "SchemesList";
   const setStudent = (event) => {
     let value = event.target.textContent;
     let newState = { ...props.state, category: value };
     props.setState(newState);
     props.actions.handleDb(newState);
     document.getElementById("student").style.display = "none";
-    props.actions.handleEvent(value, botMessage);
+    props.actions.handleEvent(value, botMessage, widget);
   };
 
   // props.actions.handleDb(props.state)

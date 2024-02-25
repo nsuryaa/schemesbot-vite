@@ -5,6 +5,7 @@ import City from "./City";
 import Community from "./Community";
 import DiffAbled from "./DiffAbled";
 import Student from "./Stundent";
+import SchemesList from "./SchemesList";
 const botName = "SchemesBot";
 const config = {
   initialMessages: [
@@ -86,6 +87,11 @@ const config = {
       widgetName: "Student",
       widgetFunc: (props) => <Student {...props} />,
       mapStateToProps: ["category"],
+    },
+    {
+      widgetName: "SchemesList",
+      widgetFunc: (props) => <SchemesList {...props} />,
+      // mapStateToProps: ["category"],
     },
   ],
   botName: botName,

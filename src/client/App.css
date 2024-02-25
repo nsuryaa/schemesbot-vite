@@ -42,7 +42,17 @@
   border-radius: 20px !important; /* Update border radius */
   background-color: #6e00ff;
   color: white !important;
+  animation: fadeIn 0.5s ease;
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
+}
+@keyframes fadeIn {
+  /* Changed */
+  from {
+    opacity: 0;
+  } /* Changed */
+  to {
+    opacity: 1;
+  } /* Changed */
 }
 
 .react-chatbot-kit-chat-bot-message-arrow {
@@ -54,6 +64,19 @@
 .react-chatbot-kit-chat-bot-avatar {
   display: flex !important;
   align-items: center !important;
+}
+
+.react-chatbot-kit-user-chat-message {
+  margin-right: 0 !important;
+  width: 45% !important;
+  font-size: 1rem !important;
+  padding: 1rem 2rem !important;
+  line-height: 2rem !important;
+  border-radius: 20px !important; /* Update border radius */
+  background-color: #b9bec8 !important;
+  color: white !important;
+  animation: fadeIn 0.5s ease;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
 }
 
 .react-chatbot-kit-chat-header {

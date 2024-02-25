@@ -45,9 +45,9 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   };
 
   const handleSchemesList = (data) => {
-    data.map((scheme,index) => {
+    data.map((scheme, index) => {
       const message = createChatBotMessage(
-        `${index+1}) ${scheme.scheme_details.title_name}`
+        `${index + 1}) ${scheme.scheme_details.title_name}`
       );
       updateState(message);
     });
