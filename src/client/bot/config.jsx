@@ -103,6 +103,9 @@ const config = {
       backgroundColor: "#5ccc9d",
     },
   },
+  customMessages: {
+    info: (props) => <SchemesList {...props} />,
+  },
 };
 
 export default config;

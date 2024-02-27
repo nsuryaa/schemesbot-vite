@@ -1,5 +1,6 @@
 import React from "react";
 import { createClientMessage } from "react-chatbot-kit";
+import { customMessage } from "react-chatbot-kit/build/src/components/Chat/chatUtils";
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const updateState = (message) => {
@@ -51,6 +52,20 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       );
       updateState(message);
     });
+
+    // const message = createChatBotMessage(
+    //   `${data[0].scheme_details.title_name}`
+    // );
+    // updateState(message);
+  };
+  const handleSchemesList2 = (data) => {
+    data.map((scheme, index) => {
+      const message = customMessage(
+        `${index + 1}) ${scheme.scheme_details.title_name}`
+      );
+      updateState(message);
+    });
+
     // const message = createChatBotMessage(
     //   `${data[0].scheme_details.title_name}`
     // );
