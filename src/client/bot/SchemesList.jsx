@@ -1,15 +1,20 @@
 import React from "react";
 
 export default function SchemesList(props) {
-  return (
-    <div>
-      <div class="schemes-section">
-        <div class="schemes-title">
-          <h1>`${props.title}`</h1>
+  console.log(props);
+  let scheme = JSON.parse(props.state.data);
+return (
+  scheme.map((scheme,key) => {
+    return (
+      <div className="schemes-section" key={key}>
+        <div className="schemes-title">
+          <h1>{`${scheme.scheme_details.title_name}`}</h1>
         </div>
-        <div class="section_container">
-          <div class="schemes-description">`${props.description}`</div>
-          <div class="other-info">
+        <div className="section_container">
+          <div className="schemes-description">
+          {`${scheme.description}`}
+          </div>
+          <div className="other-info">
             <ul>
               <li>Microsites</li>
               <li>Multilingual CMS solutions</li>
@@ -21,6 +26,6 @@ export default function SchemesList(props) {
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }))
 }

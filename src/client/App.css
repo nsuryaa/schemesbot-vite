@@ -200,7 +200,7 @@
   top: -30px;
   left: -30px;
 }
-/*Schemes Section*/
+
 .schemes-section {
   color: #ffffff;
   background-color: #6e00ff;
@@ -213,7 +213,7 @@
   width: 100%;
   text-align: left;
   font-family: "Ginto Nord", sans-serif;
-  font-size: 12px !important;
+  font-size: 6px;
   line-height: 32px;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -229,8 +229,8 @@
 }
 .schemes-description {
   font-family: "GT America Standard", sans-serif;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 15px;
+  line-height: 22px;
   text-align: justify;
   color: #ffffff;
   background-color: #6e00ff;
@@ -238,8 +238,8 @@
 }
 .other-info {
   font-family: "GT America Extended", sans-serif;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 25px;
   text-align: start;
   color: #ffffff;
   background-color: #6e00ff;

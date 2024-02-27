@@ -57,7 +57,7 @@ app.post("/suggest", async (req, res) => {
     const options = {
       // Sort matched documents in descending order by rating
       // Include only the `title` and `imdb` fields in the returned document
-      projection: { _id: 0, "scheme_details.title_name": 1 },
+      projection: { _id: 0, "scheme_details.title_name": 1, description: 1 },
     };
     // Query MongoDB for data
     const data = await collection.find(query, options).toArray();

@@ -1,7 +1,5 @@
-import React from "react";
 import { createClientMessage } from "react-chatbot-kit";
-import { customMessage } from "react-chatbot-kit/build/src/components/Chat/chatUtils";
-
+import React from "react";
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const updateState = (message) => {
     setState((prev) => ({
@@ -38,39 +36,33 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data); // Handle the response data
-        handleSchemesList(data);
+        handleSchemesList2(data);
       })
       .catch((error) => {
         console.error("Error:", error);
       });
   };
 
-  const handleSchemesList = (data) => {
-    data.map((scheme, index) => {
-      const message = createChatBotMessage(
-        `${index + 1}) ${scheme.scheme_details.title_name}`
-      );
-      updateState(message);
-    });
+  // const handleSchemesList = (data) => {
+  //   data.map((scheme, index) => {
+  //     const message = createChatBotMessage(
+  //       `${index + 1}) ${scheme.scheme_details.title_name}`
+  //     );
+  //     updateState(message);
+  //   });
+  //   // const message = createChatBotMessage(
+  //   //   `${data[0].scheme_details.title_name}`
+  //   // );
+  //   // updateState(message);
+  // };
 
-    // const message = createChatBotMessage(
-    //   `${data[0].scheme_details.title_name}`
-    // );
-    // updateState(message);
-  };
   const handleSchemesList2 = (data) => {
-    data.map((scheme, index) => {
-      const message = customMessage(
-        `${index + 1}) ${scheme.scheme_details.title_name}`
-      );
-      updateState(message);
-    });
-
-    // const message = createChatBotMessage(
-    //   `${data[0].scheme_details.title_name}`
-    // );
-    // updateState(message);
+    setState((state) => ({ ...state, data: JSON.stringify(data) }));
   };
+  // const message = createChatBotMessage(
+  //   `${data[0].scheme_details.title_name}`
+  // );
+  // updateState(message);
 
   return (
     <div>
