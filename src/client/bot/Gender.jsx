@@ -1,7 +1,8 @@
 import React from "react";
 
 export default function Gender(props) {
-  let botMessage = "Enter you age:\n உங்கள் வயதை உள்ளிடவும்";
+  // let botMessage = "Enter you age:\n உங்கள் வயதை உள்ளிடவும்";
+  let botMessage = "Enter you age:";
   // console.log(props);
   const setGender = (event) => {
     let choice = event.target.textContent;

@@ -1,5 +1,6 @@
 import { createClientMessage } from "react-chatbot-kit";
 import React from "react";
+
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const updateState = (message) => {
     setState((prev) => ({
@@ -26,7 +27,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   };
 
   const handleDb = (state) => {
-    fetch("http://localhost:3000/suggest", {
+    fetch("http://localhost:3001/suggest", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -42,19 +43,6 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         console.error("Error:", error);
       });
   };
-
-  // const handleSchemesList = (data) => {
-  //   data.map((scheme, index) => {
-  //     const message = createChatBotMessage(
-  //       `${index + 1}) ${scheme.scheme_details.title_name}`
-  //     );
-  //     updateState(message);
-  //   });
-  //   // const message = createChatBotMessage(
-  //   //   `${data[0].scheme_details.title_name}`
-  //   // );
-  //   // updateState(message);
-  // };
 
   const handleSchemesList2 = (data) => {
     setState((state) => ({ ...state, data: JSON.stringify(data) }));
@@ -140,3 +128,18 @@ export default ActionProvider;
 //   const message = createChatBotMessage("Please,enter a valid age!");
 //   updateState(message);
 // };
+
+
+//old schemes list code
+  // const handleSchemesList = (data) => {
+  //   data.map((scheme, index) => {
+  //     const message = createChatBotMessage(
+  //       `${index + 1}) ${scheme.scheme_details.title_name}`
+  //     );
+  //     updateState(message);
+  //   });
+  //   // const message = createChatBotMessage(
+  //   //   `${data[0].scheme_details.title_name}`
+  //   // );
+  //   // updateState(message);
+  // };
